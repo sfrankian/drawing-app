@@ -1,8 +1,22 @@
 var canvas = document.querySelector('#canvasArea');
 var context = canvas.getContext('2d');
 var colorPicker = document.getElementById('#colorPicker');
-
+var paintColor = '#000000';
 var mouse = {x: 0, y:0};
+
+// Color picker event listeners
+
+colorPicker.addEventListener("input", updateFirst, false);
+colorPicker.addEventListener("change", watchColorPicker, false);
+
+function watchColorPicker(event) {
+  context.strokeStyle = event.target.value;
+}
+
+function updateFirst(event) {
+  context.strokeStyle = event.target.value;
+}
+
 // Mouse event
 canvas.addEventListener('mousemove', function(e){
   mouse.x = e.pageX - this.offsetLeft;
@@ -10,7 +24,7 @@ canvas.addEventListener('mousemove', function(e){
 }, false);
 
 context.lineWidth = 5;
-context.strokeStyle = 'blue';
+context.strokeStyle = paintColor;
 
 canvas.addEventListener('mousedown', function(e) {
     context.beginPath();
