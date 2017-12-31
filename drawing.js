@@ -17,7 +17,7 @@ function updateFirst(event) {
   context.strokeStyle = event.target.value;
 }
 
-// Mouse event
+// Mouse events
 canvas.addEventListener('mousemove', function(e){
   mouse.x = e.pageX - this.offsetLeft;
   mouse.y = e.pageY - this.offsetTop;
@@ -38,7 +38,14 @@ canvas.addEventListener('mouseup', function() {
   canvas.removeEventListener('mousemove', onPaint, false);
 }, false);
 
+// Drawing to canvas
 var onPaint = function() {
     context.lineTo(mouse.x, mouse.y);
     context.stroke();
 };
+
+// Saving canvas to image
+function saveImage() {
+  var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+  window.location.href = image;
+}

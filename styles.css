@@ -1,3 +1,11 @@
 #canvasArea {
   outline: black 2px solid;
 }
+
+#appContainer {
+  margin-left: 10px;
+}
+
+#toolbar .toolbar_item {
+  display: inline-block;
+}
