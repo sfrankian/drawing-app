@@ -2,16 +2,25 @@
 <html>
   <head>
     <title>Drawing App</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-    integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div id="appContainer">
       <h1>Drawing App</h1>
       <section id="toolbar">
-        <input class="toolbar_item"type="color" id="#colorPicker">
-        <button onclick="saveImage()">Save</button>
+        <input class="toolbar_item" type="color" id="#colorPicker">
+
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default" onclick="saveImage()" aria-label="Save as png">
+            <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="btn btn-default" onclick="deleteCanvas()" aria-label="Save as png">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+          </button>
+        </div>
       </section>
       <section id="canvasContainer">
         <canvas id="canvasArea" width="500" height="500"></canvas>

@@ -48,4 +48,10 @@ var onPaint = function() {
 function saveImage() {
   var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
   window.location.href = image;
+  alert("Image saved as png.");
+}
+
+// Deleting canvasArea
+function deleteCanvas() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
 }
