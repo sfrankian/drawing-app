@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
   integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div id="appContainer">
@@ -20,16 +24,24 @@
             <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
           </button>
           <input class="toolbar_item" type="color" id="#colorPicker">
-  
+
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Brush Size
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li data-val="3"><a href="#">3px</a></li>
+              <li data-val="5"><a href="#">5px</a></li>
+              <li data-val="10"><a href="#">10px</a></li>
+            </ul>
+          </div>
+
         </div>
-
-
-
       </section>
       <section id="canvasContainer">
         <canvas id="canvasArea" width="500" height="500"></canvas>
       </section>
     </div>
-    <script type="text/javascript" src="drawing.js"></script>
+      <script type="text/javascript" src="drawing.js"></script>
+
   </body>
 </html>

@@ -54,3 +54,8 @@ function saveImage() {
 function deleteCanvas() {
   context.clearRect(0, 0, canvas.width, canvas.height);
 }
+
+$('li').click(function () {
+    var val = $(this).data('val');
+    context.lineWidth = val;
+});
