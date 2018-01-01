@@ -5,7 +5,6 @@ var paintColor = '#000000';
 var mouse = {x: 0, y:0};
 
 // Color picker event listeners
-
 colorPicker.addEventListener("input", updateFirst, false);
 colorPicker.addEventListener("change", watchColorPicker, false);
 

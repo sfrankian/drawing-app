@@ -1,11 +1,23 @@
 #canvasArea {
   outline: black 2px solid;
+  margin: 5px;
 }
 
 #appContainer {
   margin-left: 10px;
 }
 
-#toolbar .toolbar_item {
+/* #toolbar .toolbar_item {
   display: inline-block;
+} */
+
+#toolbar {
+  float: left;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+h1 {
+  margin-left: 65px;
 }

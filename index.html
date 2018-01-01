@@ -10,17 +10,21 @@
   <body>
     <div id="appContainer">
       <h1>Drawing App</h1>
-      <section id="toolbar">
-        <input class="toolbar_item" type="color" id="#colorPicker">
 
-        <div class="btn-group" role="group" aria-label="...">
+      <section id="toolbar">
+        <div class="btn-group-vertical" role="group" aria-label="...">
           <button type="button" class="btn btn-default" onclick="saveImage()" aria-label="Save as png">
             <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>
           </button>
           <button type="button" class="btn btn-default" onclick="deleteCanvas()" aria-label="Save as png">
             <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
           </button>
+          <input class="toolbar_item" type="color" id="#colorPicker">
+  
         </div>
+
+
+
       </section>
       <section id="canvasContainer">
         <canvas id="canvasArea" width="500" height="500"></canvas>
