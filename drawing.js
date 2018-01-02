@@ -55,6 +55,12 @@ function deleteCanvas() {
   context.clearRect(0, 0, canvas.width, canvas.height);
 }
 
+// Set Eraser
+function setToErase() {
+  context.lineWidth = 10;
+  context.strokeStyle = "#FFFFFF";
+}
+
 $('li').click(function () {
     var val = $(this).data('val');
     context.lineWidth = val;
